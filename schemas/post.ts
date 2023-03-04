@@ -59,6 +59,9 @@ export default defineType({
         {
           type: 'youtube',
         },
+        {
+          type: 'spotify',
+        },
       ],
     }),
     defineField({
