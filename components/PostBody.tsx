@@ -15,6 +15,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './PostBody.module.css'
+import Spotify from './Spotify'
 import YouTube from './YouTube'
 
 const myCustomComponents = {
@@ -65,6 +66,10 @@ const myCustomComponents = {
       const { url } = value
       const id = getYouTubeID(url)
       return <YouTube id={id} />
+    },
+    spotify: ({ value }) => {
+      const { type, id } = value
+      return <Spotify type={type} id={id} />
     },
   },
 }
