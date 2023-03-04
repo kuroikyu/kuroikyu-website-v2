@@ -40,6 +40,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      rows: 3,
+    }),
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
@@ -54,11 +60,6 @@ export default defineType({
           type: 'youtube',
         },
       ],
-    }),
-    defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'text',
     }),
     defineField({
       name: 'coverImage',
