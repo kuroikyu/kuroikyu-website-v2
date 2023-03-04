@@ -11,8 +11,11 @@ export default function PostHeader(
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:mb-12 md:block">
+      <div className="hidden md:mb-12 md:flex md:justify-between md:items-center">
         {author && <Avatar name={author.name} picture={author.picture} />}
+        <div className="text-lg">
+          <Date dateString={date} />
+        </div>
       </div>
       <div className="mb-8 sm:mx-0 md:mb-16">
         <CoverImage title={title} image={coverImage} priority slug={slug} />
@@ -21,7 +24,7 @@ export default function PostHeader(
         <div className="mb-6 block md:hidden">
           {author && <Avatar name={author.name} picture={author.picture} />}
         </div>
-        <div className="mb-6 text-lg">
+        <div className="mb-6 text-lg md:hidden">
           <Date dateString={date} />
         </div>
       </div>
