@@ -2,7 +2,7 @@ import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
 
-import authorType from './author'
+import { authorField } from './author'
 
 /**
  * This file is the schema definition for a post.
@@ -40,15 +40,26 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }],
-    }),
-    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
+      rows: 3,
+    }),
+    defineField({
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'mediaImage',
+        },
+        {
+          type: 'youtube',
+        },
+      ],
     }),
     defineField({
       name: 'coverImage',
@@ -64,12 +75,7 @@ export default defineType({
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
     }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: [{ type: authorType.name }],
-    }),
+    authorField,
   ],
   preview: {
     select: {

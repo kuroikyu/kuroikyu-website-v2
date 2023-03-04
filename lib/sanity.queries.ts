@@ -20,7 +20,20 @@ export const indexQuery = groq`
 export const postAndMoreStoriesQuery = groq`
 {
   "post": *[_type == "post" && slug.current == $slug] | order(_updatedAt desc) [0] {
-    content,
+    content[] {
+      ...,
+      _type == "mediaImage" => {
+        ...,
+        link {
+          ...,
+          reference->
+        },
+        asset->,
+      },
+      _type == "youtube" => {
+        ...,
+      }
+    },
     ${postFields}
   },
   "morePosts": *[_type == "post" && slug.current != $slug] | order(date desc, _updatedAt desc) [0...2] {

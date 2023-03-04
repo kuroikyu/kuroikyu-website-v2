@@ -10,7 +10,10 @@ import { settingsPlugin, settingsStructure } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import { media } from 'sanity-plugin-media'
 import authorType from 'schemas/author'
+import mediaImage from 'schemas/common/mediaImage'
+import youtube from 'schemas/common/youtube'
 import postType from 'schemas/post'
 import settingsType from 'schemas/settings'
 
@@ -24,7 +27,7 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [authorType, postType, settingsType],
+    types: [authorType, mediaImage, postType, settingsType, youtube],
   },
   plugins: [
     deskTool({
@@ -42,6 +45,9 @@ export default defineConfig({
     }),
     // Add an image asset source for Unsplash
     unsplashImageAsset(),
+    // A convenient way to browse, manage and select all your Sanity assets.
+    // https://www.sanity.io/plugins/sanity-plugin-media
+    media(),
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
