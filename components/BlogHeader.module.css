@@ -1,3 +1,9 @@
 .portableText a {
-  @apply underline transition-colors duration-200 hover:text-success;
+  @apply relative;
+}
+.portableText a::before {
+  @apply content-[''] absolute bg-kuroi left-0 bottom-1 w-full h-2 -z-10 transition-all;
+}
+.portableText a:hover::before {
+  @apply bottom-0 h-full;
 }

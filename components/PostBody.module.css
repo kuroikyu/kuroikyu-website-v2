@@ -18,8 +18,11 @@
 }
 
 .portableText a {
-  @apply text-blue-500 underline;
+  @apply relative;
 }
-.portableText a:hover {
-  @apply text-blue-800;
+.portableText a::before {
+  @apply content-[''] absolute bg-kuroi left-0 bottom-1 w-full h-2 -z-10 transition-all;
+}
+.portableText a:hover::before {
+  @apply bottom-0 h-full;
 }
