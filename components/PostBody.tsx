@@ -55,7 +55,7 @@ const myCustomComponents = {
           </LinkComponent>
 
           {value?.caption ? (
-            <div className="pt-2 text-center text-sm tracking-tight text-black/60">
+            <div className="pt-2 text-center text-sm tracking-tight text-zinc-100/60">
               {value.caption}
             </div>
           ) : null}
