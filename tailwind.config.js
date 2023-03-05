@@ -2,7 +2,6 @@
 module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx}',
-    './intro-template/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './plugins/**/*.{js,ts,jsx,tsx}',
   ],
@@ -13,7 +12,10 @@ module.exports = {
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
         success: '#0070f3',
+        kuroi: '#DA145B',
         cyan: '#79FFE1',
+        black: '#111112',
+        'true-black': '#000000',
         'blue-500': '#2276FC',
         'yellow-100': '#fef7da',
       },
