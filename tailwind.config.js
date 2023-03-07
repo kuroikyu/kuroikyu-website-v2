@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
+        'accent-2': '#151515',
         'accent-7': '#333',
         success: '#0070f3',
         kuroi: '#DA145B',
