@@ -14,6 +14,12 @@ export default function StudioPage() {
     <>
       <Head>
         <NextStudioHead favicons={false} />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/studio-favicon-32x32.png"
+        />
       </Head>
 
       <NextStudio config={config}>
