@@ -6,28 +6,28 @@ import config from 'sanity.config'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle(({ theme }) => ({
-  html: { backgroundColor: theme.sanity.color.base.bg },
+	html: { backgroundColor: theme.sanity.color.base.bg },
 }))
 
 export default function StudioPage() {
-  return (
-    <>
-      <Head>
-        <NextStudioHead favicons={false} />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/studio-favicon-32x32.png"
-        />
-      </Head>
+	return (
+		<>
+			<Head>
+				<NextStudioHead favicons={false} />
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon/studio-favicon-32x32.png"
+				/>
+			</Head>
 
-      <NextStudio config={config}>
-        <StudioProvider config={config}>
-          <GlobalStyle />
-          <StudioLayout />
-        </StudioProvider>
-      </NextStudio>
-    </>
-  )
+			<NextStudio config={config}>
+				<StudioProvider config={config}>
+					<GlobalStyle />
+					<StudioLayout />
+				</StudioProvider>
+			</NextStudio>
+		</>
+	)
 }

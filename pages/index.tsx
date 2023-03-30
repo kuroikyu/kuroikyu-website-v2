@@ -8,56 +8,56 @@ import { lazy } from 'react'
 const PreviewIndexPage = lazy(() => import('components/PreviewIndexPage'))
 
 interface PageProps {
-  posts: Post[]
-  settings: Settings
-  preview: boolean
-  token: string | null
+	posts: Post[]
+	settings: Settings
+	preview: boolean
+	token: string | null
 }
 
 interface Query {
-  [key: string]: string
+	[key: string]: string
 }
 
 interface PreviewData {
-  token?: string
+	token?: string
 }
 
 export default function Page(props: PageProps) {
-  const { posts, settings, preview, token } = props
+	const { posts, settings, preview, token } = props
 
-  if (preview) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <IndexPage loading preview posts={posts} settings={settings} />
-        }
-      >
-        <PreviewIndexPage token={token} />
-      </PreviewSuspense>
-    )
-  }
+	if (preview) {
+		return (
+			<PreviewSuspense
+				fallback={
+					<IndexPage loading preview posts={posts} settings={settings} />
+				}
+			>
+				<PreviewIndexPage token={token} />
+			</PreviewSuspense>
+		)
+	}
 
-  return <IndexPage posts={posts} settings={settings} />
+	return <IndexPage posts={posts} settings={settings} />
 }
 
 export const getStaticProps: GetStaticProps<
-  PageProps,
-  Query,
-  PreviewData
+	PageProps,
+	Query,
+	PreviewData
 > = async (ctx) => {
-  const { preview = false, previewData = {} } = ctx
+	const { preview = false, previewData = {} } = ctx
 
-  const [settings, posts = []] = await Promise.all([
-    getSettings(),
-    getAllPosts(),
-  ])
+	const [settings, posts = []] = await Promise.all([
+		getSettings(),
+		getAllPosts(),
+	])
 
-  return {
-    props: {
-      posts,
-      settings,
-      preview,
-      token: previewData.token ?? null,
-    },
-  }
+	return {
+		props: {
+			posts,
+			settings,
+			preview,
+			token: previewData.token ?? null,
+		},
+	}
 }

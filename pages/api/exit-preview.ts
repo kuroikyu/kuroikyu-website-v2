@@ -6,13 +6,13 @@ import type { PageConfig } from 'next/types'
 export const config: PageConfig = { runtime: 'nodejs' }
 
 export default function exit(
-  _req: NextApiRequest,
-  res: NextApiResponse<void>
+	_req: NextApiRequest,
+	res: NextApiResponse<void>
 ): void {
-  // Exit the current user from "Preview Mode".
-  res.clearPreviewData()
+	// Exit the current user from "Preview Mode".
+	res.clearPreviewData()
 
-  // Redirect the user back to the index page.
-  res.writeHead(307, { Location: '/' })
-  res.end()
+	// Redirect the user back to the index page.
+	res.writeHead(307, { Location: '/' })
+	res.end()
 }
