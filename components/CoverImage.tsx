@@ -14,8 +14,9 @@ export default function CoverImage(props: CoverImageProps) {
   const { title, slug, image: source, priority } = props
   const image = source?.asset?._ref ? (
     <div
-      className={cn('shadow-small', {
-        'transition-shadow duration-200 hover:shadow-medium': slug,
+      className={cn('shadow-small shadow-true-black', {
+        'transition-shadow duration-200 hover:shadow-medium hover:shadow-true-black':
+          slug,
       })}
     >
       <Image
@@ -29,7 +30,7 @@ export default function CoverImage(props: CoverImageProps) {
       />
     </div>
   ) : (
-    <div style={{ paddingTop: '50%', backgroundColor: '#ddd' }} />
+    <div className="bg-black pt-[50%]" />
   )
 
   return (
