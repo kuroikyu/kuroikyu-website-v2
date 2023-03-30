@@ -11,7 +11,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head />
 			<body
-				className="bg-black text-zinc-100"
+				className="bg-black text-zinc-100 selection:bg-kuroi selection:text-kuroi-50"
 				style={{
 					background: `
             linear-gradient(90deg, ${bgColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
