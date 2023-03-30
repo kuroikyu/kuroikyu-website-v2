@@ -62,7 +62,7 @@ export default function BlogHeader({
     case 2:
       return (
         <header>
-          <h2 className={`mt-8 mb-20 w-36 md:w-52`}>
+          <h2 className="mt-8 mb-20 w-36 md:w-52 hover:shadow-medium hover:shadow-kuroi/50 transition-all duration-200">
             <Link href="/">
               <KuroiKyuTitle className="w-36 md:w-52" />
             </Link>
