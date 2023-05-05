@@ -19,7 +19,9 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 				<meta
 					property="og:image"
 					content={`${
-						process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+						process.env.NEXT_PUBLIC_VERCEL_URL
+							? 'https://' + process.env.NEXT_PUBLIC_VERCEL_URL
+							: ''
 					}/api/og-post?${new URLSearchParams({
 						title: post.title || title,
 						image: urlForImage(post.coverImage)
