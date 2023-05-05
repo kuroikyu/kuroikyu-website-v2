@@ -2,6 +2,7 @@ import BlogMeta from 'components/BlogMeta'
 import * as demo from 'lib/demo.data'
 import { urlForImage } from 'lib/sanity.image'
 import { Post, Settings } from 'lib/sanity.queries'
+import { getServerDeploymentURL } from 'lib/sanity.url'
 import Head from 'next/head'
 
 export interface PostPageHeadProps {
@@ -18,18 +19,16 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 			{post.coverImage?.asset?._ref && (
 				<meta
 					property="og:image"
-					content={`${
-						process.env.NEXT_PUBLIC_VERCEL_URL
-							? 'https://' + process.env.NEXT_PUBLIC_VERCEL_URL
-							: ''
-					}/api/og-post?${new URLSearchParams({
-						title: post.title || title,
-						image: urlForImage(post.coverImage)
-							.width(1200)
-							.height(630)
-							.fit('crop')
-							.url(),
-					})}`}
+					content={`${getServerDeploymentURL()}/api/og-post?${new URLSearchParams(
+						{
+							title: post.title || title,
+							image: urlForImage(post.coverImage)
+								.width(1200)
+								.height(630)
+								.fit('crop')
+								.url(),
+						}
+					)}`}
 				/>
 			)}
 		</Head>
