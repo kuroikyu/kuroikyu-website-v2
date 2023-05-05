@@ -18,11 +18,16 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 			{post.coverImage?.asset?._ref && (
 				<meta
 					property="og:image"
-					content={urlForImage(post.coverImage)
-						.width(1200)
-						.height(627)
-						.fit('crop')
-						.url()}
+					content={`${
+						process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+					}/api/og?${new URLSearchParams({
+						title: post.title || title,
+						image: urlForImage(post.coverImage)
+							.width(1200)
+							.height(630)
+							.fit('crop')
+							.url(),
+					})}`}
 				/>
 			)}
 		</Head>

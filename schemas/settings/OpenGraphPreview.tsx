@@ -18,10 +18,10 @@ async function init(): Promise<SatoriOptions['fonts']> {
 	}
 
 	const fontData = await fetch(
-		new URL('public/Inter-Bold.woff', import.meta.url)
+		new URL('public/Catamaran-Bold.ttf', import.meta.url)
 	).then((res) => res.arrayBuffer())
 
-	return [{ name: 'Inter', data: fontData, style: 'normal', weight: 700 }]
+	return [{ name: 'Catamaran', data: fontData, style: 'normal', weight: 700 }]
 }
 
 // preload fonts and polyfill
