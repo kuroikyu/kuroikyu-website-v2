@@ -26,6 +26,7 @@ export async function getSecret(
 			await client
 				.transaction()
 				.createIfNotExists({ _id: id, _type: id })
+				// @ts-expect-error - until `sanity` supports v6 of `@sanity/client`
 				.patch(patch)
 				.commit({ tag })
 			return newSecret
