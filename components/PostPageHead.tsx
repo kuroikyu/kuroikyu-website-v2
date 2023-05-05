@@ -20,7 +20,7 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 					property="og:image"
 					content={`${
 						process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
-					}/api/og?${new URLSearchParams({
+					}/api/og-post?${new URLSearchParams({
 						title: post.title || title,
 						image: urlForImage(post.coverImage)
 							.width(1200)
