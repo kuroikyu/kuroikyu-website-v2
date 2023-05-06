@@ -1,7 +1,6 @@
 import * as demo from 'lib/demo.data'
 import { urlForImage } from 'lib/sanity.image'
 import { Post, Settings } from 'lib/sanity.queries'
-import { getServerDeploymentURL } from 'lib/sanity.url'
 import Head from 'next/head'
 
 import IndexMeta from './meta/IndexMeta'
@@ -14,29 +13,25 @@ export interface PostPageHeadProps {
 export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 	const mixedTitle = settings.title ?? demo.title
 	const title = post.title || mixedTitle
+	const isImageAvailable = !!post.coverImage?.asset?._ref
+	const image = urlForImage(post.coverImage)
+		.width(1200)
+		.height(630)
+		.fit('crop')
+		.url()
 	return (
 		<Head>
 			<title>{post.title ? `${post.title} | ${mixedTitle}` : title}</title>
 			<IndexMeta />
-			<meta key="description" name="description" content={post.excerpt} />
+			{!!post?.excerpt && (
+				<meta key="description" name="description" content={post.excerpt} />
+			)}
 			{/* og tags */}
 			<meta property="og:title" content={title} />
-			<meta property="og:description" content={post.excerpt} />
-			{post.coverImage?.asset?._ref && (
-				<meta
-					property="og:image"
-					content={`${getServerDeploymentURL()}/api/og-post?${new URLSearchParams(
-						{
-							title: title,
-							image: urlForImage(post.coverImage)
-								.width(1200)
-								.height(630)
-								.fit('crop')
-								.url(),
-						}
-					)}`}
-				/>
+			{!!post?.excerpt && (
+				<meta property="og:description" content={post.excerpt} />
 			)}
+			{isImageAvailable && <meta property="og:image" content={image} />}
 			<meta property="og:type" content="article" />
 			<meta property="og:site_name" content="Kuroi Kyu" />
 			<meta property="og:locale" content="en_US" />
@@ -49,15 +44,10 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 			<meta property="profile:username" content="kuroikyu" />
 			{/* twitter tags */}
 			<meta property="twitter:title" content={title} />
-			<meta property="twitter:description" content={post.excerpt} />
-			<meta
-				property="twitter:image"
-				content={urlForImage(post.coverImage)
-					.width(1200)
-					.height(630)
-					.fit('crop')
-					.url()}
-			/>
+			{!!post?.excerpt && (
+				<meta property="twitter:description" content={post.excerpt} />
+			)}
+			{isImageAvailable && <meta property="twitter:image" content={image} />}
 			<meta property="twitter:card" content="summary_large_image" />
 		</Head>
 	)
