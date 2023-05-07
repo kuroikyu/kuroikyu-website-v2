@@ -54,4 +54,4 @@ export const description = [
 	},
 ]
 
-export const ogImageTitle = `A nerd's life`
+export const ogImageTitle = `Embark on a nerdy adventure with me!`
