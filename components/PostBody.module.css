@@ -22,11 +22,10 @@
 }
 
 .portableText a {
-	@apply relative;
+	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
+	background-size: auto 175%;
 }
-.portableText a::before {
-	@apply absolute bottom-1 left-0 -z-10 h-2 w-full bg-kuroi transition-all content-[''];
-}
-.portableText a:hover::before {
-	@apply bottom-0 h-full;
+
+.portableText a:hover {
+	background-position-y: 100%;
 }
