@@ -1,9 +1,9 @@
 .portableText a {
-  @apply relative;
+	@apply relative;
 }
 .portableText a::before {
-  @apply content-[''] absolute bg-kuroi left-0 bottom-1 w-full h-2 -z-10 transition-all;
+	@apply absolute bottom-1 left-0 -z-10 h-2 w-full bg-kuroi transition-all content-[''];
 }
 .portableText a:hover::before {
-  @apply bottom-0 h-full;
+	@apply bottom-0 h-full;
 }
