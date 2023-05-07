@@ -1,6 +1,7 @@
 import * as demo from 'lib/demo.data'
 import { urlForImage } from 'lib/sanity.image'
 import { Post, Settings } from 'lib/sanity.queries'
+import { hasProductionDomain, isProductionEnvironment } from 'lib/server.url'
 import Head from 'next/head'
 
 import IndexMeta from './meta/IndexMeta'
@@ -19,6 +20,7 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 		.height(630)
 		.fit('crop')
 		.url()
+
 	return (
 		<Head>
 			<title>{post.title ? `${post.title} | ${mixedTitle}` : title}</title>
@@ -35,6 +37,12 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 			<meta property="og:type" content="article" />
 			<meta property="og:site_name" content="Kuroi Kyu" />
 			<meta property="og:locale" content="en_US" />
+			{isProductionEnvironment && hasProductionDomain && !!post?.slug && (
+				<meta
+					property="og:url"
+					content={`https://${process.env.NEXT_PUBLIC_SITE_DOMAIN}/posts/${post.slug}`}
+				/>
+			)}
 			{/* article tags */}
 			{!!post?.date && (
 				<meta property="article:published_time" content={post.date} />
