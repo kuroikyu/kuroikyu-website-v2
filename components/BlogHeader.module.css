@@ -1,4 +1,4 @@
-.portableText a {
+/* .portableText a {
 	@apply relative;
 }
 .portableText a::before {
@@ -6,4 +6,13 @@
 }
 .portableText a:hover::before {
 	@apply bottom-0 h-full;
+} */
+
+.portableText a {
+	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
+	background-size: auto 175%;
+}
+
+.portableText a:hover {
+	background-position-y: 100%;
 }
