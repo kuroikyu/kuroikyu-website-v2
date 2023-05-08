@@ -51,11 +51,11 @@ export default function BlogHeader({
 					<h1 className={`lg:pr-8`}>
 						<KuroiKyuTitle className="max-w-xs sm:max-w-md md:max-w-xl" />
 					</h1>
-					<h4
+					<h2
 						className={`mt-5 text-center text-lg lg:pl-8 lg:text-left ${styles.portableText}`}
 					>
 						<PortableText value={description} />
-					</h4>
+					</h2>
 				</header>
 			)
 
