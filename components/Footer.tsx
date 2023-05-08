@@ -22,7 +22,11 @@ const Footer: FC<Props> = () => {
 		<footer className="container mx-auto px-5 pb-16">
 			<hr className="mb-8 mt-28 border-accent-7" />
 			<div className="grid gap-8 md:grid-cols-3">
-				<Link href="/" className="mx-auto w-8 md:mx-0">
+				<Link
+					href="/"
+					className="mx-auto w-8 md:mx-0"
+					aria-label="Return to the homepage"
+				>
 					<KuroiKyuIcon className="w-full transition-all duration-200 hover:shadow-medium hover:shadow-kuroi/50" />
 				</Link>
 				<p className="text-center">
