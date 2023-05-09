@@ -10,6 +10,7 @@ export default function StudioPage() {
 				{Object.entries(metadata).map(([key, value]) => (
 					<meta key={key} name={key} content={value} />
 				))}
+				<meta name="robots" content="noindex, nofollow" />
 				<link
 					rel="icon"
 					type="image/png"
