@@ -63,7 +63,7 @@ export default function BlogHeader({
 			return (
 				<header>
 					<h2 className="mb-20 mt-8 w-36 transition-all duration-200 hover:shadow-medium hover:shadow-kuroi/50 md:w-52">
-						<Link href="/">
+						<Link href="/" aria-label="Return to the homepage">
 							<KuroiKyuTitle className="w-36 md:w-52" />
 						</Link>
 					</h2>
