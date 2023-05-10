@@ -1,0 +1,8 @@
+.cookieDeclaration a {
+	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
+	background-size: auto 175%;
+}
+
+.cookieDeclaration a:hover {
+	background-position-y: 100%;
+}
