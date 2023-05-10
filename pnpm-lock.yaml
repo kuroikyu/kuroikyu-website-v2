@@ -25,6 +25,9 @@ dependencies:
   '@sanity/vision':
     specifier: 3.10.1
     version: 3.10.1(@babel/runtime@7.21.5)(@codemirror/lint@6.2.1)(@codemirror/state@6.2.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.0.2)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.10)
+  '@vercel/analytics':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@vercel/og':
     specifier: 0.5.4
     version: 0.5.4
@@ -2144,6 +2147,10 @@ packages:
       - '@codemirror/language'
       - '@codemirror/lint'
       - '@codemirror/search'
+    dev: false
+
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: false
 
   /@vercel/error-utils@1.0.9:
