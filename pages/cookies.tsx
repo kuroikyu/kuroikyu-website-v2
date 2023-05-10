@@ -8,6 +8,8 @@ import { Settings } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
 import Script from 'next/script'
 
+import styles from '../components/CookieDeclaration.module.css'
+
 interface CookieProps {
 	settings: Settings
 	preview: boolean
@@ -33,13 +35,14 @@ export default function Cookies(props: CookieProps) {
 				<Container>
 					<BlogHeader level={2} />
 					<PostTitle>Cookies</PostTitle>
-
-					<div id="CookieDeclaration" className="hidden" />
-					<Script
-						src={`https://consent.cookiebot.com/${cookiebotDomainGroupId}/cd.js`}
-						type="text/javascript"
-						async
-					/>
+					<div className={styles.cookieDeclaration}>
+						<div id="CookieDeclaration" className="hidden" />
+						<Script
+							src={`https://consent.cookiebot.com/${cookiebotDomainGroupId}/cd.js`}
+							type="text/javascript"
+							async
+						/>
+					</div>
 				</Container>
 			</Layout>
 		</>
