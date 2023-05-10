@@ -38,9 +38,9 @@ const Footer: FC<Props> = () => {
 						{`hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}
 					</a>
 				</p>
-				<p className=" text-center text-zinc-100/60 md:text-right">
-					No cookies were baked in the making of this website.
-				</p>
+				<Link href="/cookies">
+					<p className=" text-center text-zinc-100/60 md:text-right">Cookies</p>
+				</Link>
 			</div>
 		</footer>
 	)
