@@ -22,17 +22,6 @@ export const postAndMoreStoriesQuery = groq`
   "post": *[_type == "post" && slug.current == $slug] | order(_updatedAt desc) [0] {
     content[] {
       ...,
-      _type == "mediaImage" => {
-        ...,
-        link {
-          ...,
-          reference->
-        },
-        asset->,
-      },
-      _type == "youtube" => {
-        ...,
-      }
     },
     ${postFields}
   },
