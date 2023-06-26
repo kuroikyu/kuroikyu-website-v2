@@ -54,7 +54,44 @@ export default defineType({
 					type: 'block',
 				},
 				{
-					type: 'mediaImage',
+					type: 'image',
+					options: {
+						hotspot: true,
+					},
+					fields: [
+						defineField({
+							name: 'caption',
+							type: 'string',
+							title: 'Caption',
+							description: 'Caption displayed below the image.',
+						}),
+						defineField({
+							name: 'alt',
+							type: 'string',
+							title: 'Alternative text',
+							description: 'Important for SEO and accessiblity.',
+						}),
+						defineField({
+							name: 'link',
+							type: 'object',
+							title: 'Link',
+							fields: [
+								defineField({
+									name: 'href',
+									type: 'url',
+									title: 'External URL',
+									hidden: ({ parent }) => !!parent?.reference,
+								}),
+								defineField({
+									name: 'reference',
+									type: 'reference',
+									title: 'Internal reference',
+									to: [{ type: 'post' }],
+									hidden: ({ parent }) => !!parent?.href,
+								}),
+							],
+						}),
+					],
 				},
 				{
 					type: 'youtube',
