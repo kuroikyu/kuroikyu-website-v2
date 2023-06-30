@@ -3,22 +3,40 @@ import 'tailwindcss/tailwind.css'
 import { Analytics } from '@vercel/analytics/react'
 import { AppProps } from 'next/app'
 import { Catamaran } from 'next/font/google'
-import { useEffect } from 'react'
+import { lazy, useEffect } from 'react'
 import TagManager from 'react-gtm-consent-module'
+
+export interface SharedPageProps {
+	draftMode: boolean
+	token: string
+}
+
 const catamaran = Catamaran({
 	weight: '400',
 	subsets: ['latin-ext'],
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+const PreviewProvider = lazy(() => import('components/PreviewProvider'))
+
+export default function App({
+	Component,
+	pageProps,
+}: AppProps<SharedPageProps>) {
 	/** Loads GTM - Google Tag Manager */
 	useEffect(() => {
 		const gtmTrackingCode = process.env.NEXT_PUBLIC_GTM_TRACKING_CODE
 		!!gtmTrackingCode && TagManager.initialize({ gtmId: gtmTrackingCode })
 	}, [])
+	const { draftMode, token } = pageProps
 	return (
 		<div className={catamaran.className}>
-			<Component {...pageProps} />
+			{draftMode ? (
+				<PreviewProvider token={token}>
+					<Component {...pageProps} />
+				</PreviewProvider>
+			) : (
+				<Component {...pageProps} />
+			)}
 			<Analytics />
 		</div>
 	)
