@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { FC } from 'react'
 
+import styles from './Footer.module.css'
+
 const KuroiKyuIcon: FC<{ className?: string }> = ({ className }) => (
 	<svg
 		width="112"
@@ -19,28 +21,23 @@ export type Props = {}
 const Footer: FC<Props> = () => {
 	// TODO: Migrate data to Sanity
 	return (
-		<footer className="container mx-auto px-5 pb-16">
+		<footer className={`container mx-auto px-5 pb-16 ${styles.footer}`}>
 			<hr className="mb-8 mt-28 border-accent-7" />
 			<div className="grid gap-8 md:grid-cols-3">
-				<Link
-					href="/"
-					className="mx-auto w-8 md:mx-0"
-					aria-label="Return to the homepage"
-				>
-					<KuroiKyuIcon className="w-full transition-all duration-200 hover:shadow-medium hover:shadow-kuroi/50" />
-				</Link>
+				<div className="mx-auto w-8 md:mx-0">
+					<Link href="/" aria-label="Return to the homepage">
+						<KuroiKyuIcon className="w-full transition-all duration-200 hover:shadow-medium hover:shadow-kuroi/50" />
+					</Link>
+				</div>
 				<p className="text-center">
 					Get in touch:{' '}
-					<a
-						href={`mailto:hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}
-						className="relative before:absolute before:bottom-1 before:left-0 before:-z-10 before:h-2 before:w-full before:bg-kuroi before:transition-all before:content-[''] hover:before:bottom-0 hover:before:h-full"
-					>
+					<Link href={`mailto:hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}>
 						{`hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}
-					</a>
+					</Link>
 				</p>
-				<Link href="/cookies">
-					<p className=" text-center text-zinc-100/60 md:text-right">Cookies</p>
-				</Link>
+				<div className="text-center text-zinc-100/60 md:text-right">
+					<Link href="/cookies">Cookies</Link>
+				</div>
 			</div>
 		</footer>
 	)

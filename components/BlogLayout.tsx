@@ -1,5 +1,5 @@
 import AlertBanner from 'components/AlertBanner'
-import Footer from 'components/Footer'
+import Footer from 'components/Footer/Footer'
 
 export default function BlogLayout({
 	preview,
