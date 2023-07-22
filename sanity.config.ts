@@ -12,7 +12,6 @@ import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import { media } from 'sanity-plugin-media'
 import authorType from 'schemas/author'
-import mediaImage from 'schemas/common/mediaImage'
 import spotify from 'schemas/common/spotify'
 import youtube from 'schemas/common/youtube'
 import postType from 'schemas/post'
@@ -28,7 +27,7 @@ export default defineConfig({
 	title,
 	schema: {
 		// If you want more content types, you can add them to this array
-		types: [authorType, mediaImage, postType, settingsType, spotify, youtube],
+		types: [authorType, postType, settingsType, spotify, youtube],
 	},
 	plugins: [
 		deskTool({
