@@ -1,0 +1,3 @@
+.footer a {
+	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% bg-[length:auto_175%] transition-all hover:[background-position-y:100%];
+}
