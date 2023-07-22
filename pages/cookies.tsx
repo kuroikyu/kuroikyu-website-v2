@@ -3,7 +3,7 @@ import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
 import PostTitle from 'components/PostTitle'
-import { getSettings } from 'lib/sanity.client'
+import { getClient, getSettings } from 'lib/sanity.client'
 import { Settings } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
 import Script from 'next/script'
@@ -57,8 +57,9 @@ export const getStaticProps: GetStaticProps<
 	PreviewData
 > = async (ctx) => {
 	const { preview = false, previewData = {} } = ctx
+	const client = getClient()
 
-	const [settings] = await Promise.all([getSettings()])
+	const [settings] = await Promise.all([getSettings(client)])
 
 	return {
 		props: {
