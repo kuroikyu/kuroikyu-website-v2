@@ -17,6 +17,14 @@ const authorType = defineType({
 			name: 'picture',
 			title: 'Picture',
 			type: 'image',
+			fields: [
+				{
+					name: 'alt',
+					type: 'string',
+					title: 'Alternative text',
+					description: 'Important for SEO and accessiblity.',
+				},
+			],
 			options: { hotspot: true },
 			validation: (rule) => rule.required(),
 		}),
