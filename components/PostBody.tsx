@@ -9,58 +9,16 @@
  */
 import { PortableText } from '@portabletext/react'
 import getYouTubeID from 'get-youtube-id'
-import { urlForImage } from 'lib/sanity.image'
-import { pathResolver } from 'lib/sanity.url'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import styles from './PostBody.module.css'
+import { SanityImage } from './SanityImage'
 import Spotify from './Spotify'
 import YouTube from './YouTube'
 
 const myCustomComponents = {
 	types: {
-		mediaImage: ({ value }) => {
-			const internalLink = value?.link?.href
-			const externalLink = value?.link?.reference
-			const linkType = (() => {
-				if (internalLink) return 'internal'
-				if (externalLink) return 'external'
-				return undefined
-			})()
-
-			const LinkComponent = ({ children }) =>
-				linkType ? (
-					<Link href={internalLink || pathResolver(externalLink)}>
-						{children}
-					</Link>
-				) : (
-					<>{children}</>
-				)
-
-			return (
-				<div>
-					<LinkComponent>
-						<Image
-							className="h-auto w-full"
-							width={2000}
-							height={1000}
-							alt={value?.caption || 'Embedded image'}
-							title={value?.caption}
-							src={urlForImage(value).url()}
-							sizes="100vw"
-							placeholder="blur"
-							blurDataURL={urlForImage(value).width(200).height(200).url()}
-						/>
-					</LinkComponent>
-
-					{value?.caption ? (
-						<div className="pt-2 text-center text-sm tracking-tight text-zinc-100/60">
-							{value.caption}
-						</div>
-					) : null}
-				</div>
-			)
+		image: ({ value }) => {
+			return <SanityImage {...value} />
 		},
 		youtube: ({ value }) => {
 			const { url } = value

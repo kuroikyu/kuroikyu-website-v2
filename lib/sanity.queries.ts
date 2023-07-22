@@ -4,6 +4,7 @@ const postFields = groq`
   _id,
   title,
   date,
+  _updatedAt,
   excerpt,
   coverImage,
   "slug": slug.current,
@@ -22,17 +23,6 @@ export const postAndMoreStoriesQuery = groq`
   "post": *[_type == "post" && slug.current == $slug] | order(_updatedAt desc) [0] {
     content[] {
       ...,
-      _type == "mediaImage" => {
-        ...,
-        link {
-          ...,
-          reference->
-        },
-        asset->,
-      },
-      _type == "youtube" => {
-        ...,
-      }
     },
     ${postFields}
   },
@@ -54,7 +44,11 @@ export const postBySlugQuery = groq`
 
 export interface Author {
 	name?: string
-	picture?: any
+	picture?:
+		| {
+				alt?: string
+		  }
+		| any
 }
 
 export interface Post {
@@ -62,6 +56,7 @@ export interface Post {
 	title?: string
 	coverImage?: any
 	date?: string
+	_updatedAt?: string
 	excerpt?: string
 	author?: Author
 	slug?: string
