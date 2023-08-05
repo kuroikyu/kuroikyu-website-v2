@@ -47,6 +47,17 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
 			{!!post?.date && (
 				<meta property="article:published_time" content={post.date} />
 			)}
+			{!!post?.author ? (
+				<>
+					<meta property="article:author" content={post.author.name} />
+					<meta property="author" content={post.author.name} />
+				</>
+			) : (
+				<>
+					<meta property="article:author" content="Kuroi Kyu" />
+					<meta property="author" content="Kuroi Kyu" />
+				</>
+			)}
 			<meta property="profile:first_name" content="Kuroi" />
 			<meta property="profile:last_name" content="Kyu" />
 			<meta property="profile:username" content="kuroikyu" />
