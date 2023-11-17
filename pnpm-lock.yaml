@@ -23,6 +23,9 @@ dependencies:
   '@sanity/image-url':
     specifier: 1.0.2
     version: 1.0.2
+  '@sanity/overlays':
+    specifier: 2.0.1
+    version: 2.0.1(react-is@18.2.0)
   '@sanity/preview-kit':
     specifier: 2.4.7
     version: 2.4.7(@sanity/client@6.8.6)(react@18.2.0)
@@ -1622,6 +1625,24 @@ packages:
       debug: 3.2.7
       lodash: 4.17.21
     transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@sanity/overlays@2.0.1(react-is@18.2.0):
+    resolution: {integrity: sha512-oOMRtvVqHIO1weNcSJag2ciShD6iAG1cOw5/wiPFD98hFNBVFqhxudX6ORWmG6u+y2tFa6pu2kfvDVDvRjVoYQ==}
+    engines: {node: '>=16.14'}
+    deprecated: migrate to @sanity/visual-editing
+    dependencies:
+      '@sanity/client': 6.8.6
+      '@sanity/ui': 1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.1)
+      '@vercel/stega': 0.1.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      scroll-into-view-if-needed: 3.1.0
+      styled-components: 6.1.1(react-dom@18.2.0)(react@18.2.0)
+      uuid: 9.0.1
+    transitivePeerDependencies:
+      - react-is
       - supports-color
     dev: false
 
@@ -7553,6 +7574,11 @@ packages:
 
   /uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
     dev: false
 
