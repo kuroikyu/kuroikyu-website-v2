@@ -33,8 +33,8 @@ dependencies:
     specifier: 2.4.7
     version: 2.4.7(@sanity/client@6.8.6)(react@18.2.0)
   '@sanity/preview-url-secret':
-    specifier: 1.1.0
-    version: 1.1.0(@sanity/client@6.8.6)
+    specifier: 1.2.0
+    version: 1.2.0(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(sanity@3.20.0)
   '@sanity/ui':
     specifier: 1.7.4
     version: 1.7.4(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.1)
@@ -63,8 +63,8 @@ dependencies:
     specifier: 14.0.3
     version: 14.0.3(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
-    specifier: 6.0.4
-    version: 6.0.4(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(@sanity/types@3.14.5)(@sanity/ui@1.7.4)(next@14.0.3)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
+    specifier: 6.0.5
+    version: 6.0.5(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(@sanity/types@3.14.5)(@sanity/ui@1.7.4)(next@14.0.3)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
   next-sanity-image:
     specifier: 6.1.1
     version: 6.1.1(@sanity/client@6.8.6)(next@14.0.3)(react@18.2.0)
@@ -93,8 +93,8 @@ dependencies:
     specifier: 1.1.2
     version: 1.1.2(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
   sanity-plugin-iframe-pane:
-    specifier: 3.1.0
-    version: 3.1.0(@sanity/client@6.8.6)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
+    specifier: 3.1.1
+    version: 3.1.1(@sanity/client@6.8.6)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
   sanity-plugin-media:
     specifier: 2.2.2
     version: 2.2.2(@types/react@18.2.37)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1)
@@ -1768,8 +1768,8 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/preview-kit@3.2.10(@sanity/client@6.8.6)(react@18.2.0):
-    resolution: {integrity: sha512-VWX+vd0A1MgNeUTip5FQpg6hT8IlqmqdObH80VHbn/N5p/gwK14jW7HFxkzAVisRWiX00XhKTV14m3CnN4HeMw==}
+  /@sanity/preview-kit@4.0.0(@sanity/client@6.8.6)(react@18.2.0):
+    resolution: {integrity: sha512-2EbqiX00bqzKm0EnB4s5oQQj2Bs9riz4vz4IyB7mDP8V2CMqzahMYc/RTJox5PQITK9N38ZtdO5gnwJSavwMYQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@sanity/client': ^6.8.6
@@ -1802,16 +1802,6 @@ packages:
       '@sanity/uuid': 3.0.2
     dev: false
 
-  /@sanity/preview-url-secret@1.1.0(@sanity/client@6.8.6):
-    resolution: {integrity: sha512-LBgoRfbwRti2nk2d1VPAWjGdWcjrYzlbQZfYBqW1o9o6w83vqrcF0vYSi1UP9DKhvWHfU4to9wKTffSzrl1AOg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      '@sanity/client': ^6.8.6
-    dependencies:
-      '@sanity/client': 6.8.6
-      '@sanity/uuid': 3.0.2
-    dev: false
-
   /@sanity/preview-url-secret@1.2.0(@sanity/client@6.8.6)(@sanity/icons@2.10.3)(sanity@3.20.0):
     resolution: {integrity: sha512-w2LIje78OOzbDTF+jtFg89d9Jexs/3Za5uD5leCwc3jvnguD5b0/NB0gE+MOa3rVr8Q8cRxkij3M0qAblHfLfA==}
     engines: {node: '>=18'}
@@ -1827,6 +1817,25 @@ packages:
     dependencies:
       '@sanity/client': 6.8.6
       '@sanity/icons': 2.10.3(react@18.2.0)
+      '@sanity/uuid': 3.0.2
+      sanity: 3.20.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.1)
+    dev: false
+
+  /@sanity/preview-url-secret@1.2.0(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(sanity@3.20.0):
+    resolution: {integrity: sha512-w2LIje78OOzbDTF+jtFg89d9Jexs/3Za5uD5leCwc3jvnguD5b0/NB0gE+MOa3rVr8Q8cRxkij3M0qAblHfLfA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@sanity/client': ^6.8.6
+      '@sanity/icons': ^2.7.0
+      sanity: ^3.20.0
+    peerDependenciesMeta:
+      '@sanity/icons':
+        optional: true
+      sanity:
+        optional: true
+    dependencies:
+      '@sanity/client': 6.8.6
+      '@sanity/icons': 2.4.1(react@18.2.0)
       '@sanity/uuid': 3.0.2
       sanity: 3.20.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.1)
     dev: false
@@ -5248,8 +5257,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /next-sanity@6.0.4(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(@sanity/types@3.14.5)(@sanity/ui@1.7.4)(next@14.0.3)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1):
-    resolution: {integrity: sha512-EwAlMEdSY5Yh5F2tWcTG4FrDQUuZUbpgykkw92U2aKYdZ0ebj4jKeExt6R44JYiwAyb+3VBkwRNI9oy03iIF3A==}
+  /next-sanity@6.0.5(@sanity/client@6.8.6)(@sanity/icons@2.4.1)(@sanity/types@3.14.5)(@sanity/ui@1.7.4)(next@14.0.3)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1):
+    resolution: {integrity: sha512-7y3ax7lXtikHPSHLVLOVlw7YEz3bZVfgDaLh1HYvr08ZXQqzQe2faAOKBt6OpcVbR2Fvs90p8ZqRxxc8CVhsXg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@sanity/client': ^6.8.6
@@ -5263,7 +5272,7 @@ packages:
     dependencies:
       '@sanity/client': 6.8.6
       '@sanity/icons': 2.4.1(react@18.2.0)
-      '@sanity/preview-kit': 3.2.10(@sanity/client@6.8.6)(react@18.2.0)
+      '@sanity/preview-kit': 4.0.0(@sanity/client@6.8.6)(react@18.2.0)
       '@sanity/types': 3.14.5
       '@sanity/ui': 1.7.4(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.1)
       '@sanity/webhook': 3.0.1
@@ -6494,8 +6503,8 @@ packages:
       - react-is
     dev: false
 
-  /sanity-plugin-iframe-pane@3.1.0(@sanity/client@6.8.6)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1):
-    resolution: {integrity: sha512-GdGU/QrQ3oGepBv+l53Vwavkg83OVILwhVukX14BXYdHwrMYrtmLi+9GwUpWcIJH8WtzFaeAjZBGZEwGrORm9w==}
+  /sanity-plugin-iframe-pane@3.1.1(@sanity/client@6.8.6)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.20.0)(styled-components@6.1.1):
+    resolution: {integrity: sha512-buFWmVPdTmFDLycuQKJYTYKTK8nH18WVWAfI1Juak3zxSQ63P61GN0Cl/WE9fx/6ZBP2q00dPnp8RTVahMHKFA==}
     engines: {node: '>=14'}
     peerDependencies:
       react: ^18.2.0
@@ -6504,7 +6513,7 @@ packages:
     dependencies:
       '@sanity/icons': 2.10.3(react@18.2.0)
       '@sanity/incompatible-plugin': 1.0.4(react-dom@18.2.0)(react@18.2.0)
-      '@sanity/preview-url-secret': 1.1.0(@sanity/client@6.8.6)
+      '@sanity/preview-url-secret': 1.2.0(@sanity/client@6.8.6)(@sanity/icons@2.10.3)(sanity@3.20.0)
       '@sanity/ui': 1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.1)
       framer-motion: 10.18.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
