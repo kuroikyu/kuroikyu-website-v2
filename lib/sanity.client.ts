@@ -1,18 +1,18 @@
 import {
-  apiVersion,
-  dataset,
-  projectId,
-  studioUrl,
-  useCdn,
+	apiVersion,
+	dataset,
+	projectId,
+	studioUrl,
+	useCdn,
 } from 'lib/sanity.api'
 import {
-  indexQuery,
-  postAndMoreStoriesQuery,
-  postBySlugQuery,
-  postSlugsQuery,
-  settingsQuery,
-  type Post,
-  type Settings,
+	indexQuery,
+	type Post,
+	postAndMoreStoriesQuery,
+	postBySlugQuery,
+	postSlugsQuery,
+	type Settings,
+	settingsQuery,
 } from 'lib/sanity.queries'
 import { createClient, type SanityClient } from 'next-sanity'
 
@@ -23,9 +23,8 @@ export function getClient(preview?: { token: string }): SanityClient {
 		apiVersion,
 		useCdn,
 		perspective: 'published',
-    encodeSourceMap: preview?.token ? true : false,
-    studioUrl,
-    logger: console,
+		encodeSourceMap: preview?.token ? true : false,
+		studioUrl,
 	})
 	if (preview) {
 		if (!preview.token) {
