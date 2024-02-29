@@ -1,9 +1,11 @@
 import 'tailwindcss/tailwind.css'
 
+import { VisualEditing } from '@sanity/visual-editing/next-pages-router'
 import { Analytics } from '@vercel/analytics/react'
 import { AppProps } from 'next/app'
+import dynamic from 'next/dynamic'
 import { Catamaran } from 'next/font/google'
-import { lazy, Suspense, useEffect } from 'react'
+import { useEffect } from 'react'
 import TagManager from 'react-gtm-consent-module'
 
 export interface SharedPageProps {
@@ -16,8 +18,7 @@ const catamaran = Catamaran({
 	subsets: ['latin-ext'],
 })
 
-const PreviewProvider = lazy(() => import('components/PreviewProvider'))
-const VisualEditing = lazy(() => import('components/VisualEditing'))
+const PreviewProvider = dynamic(() => import('components/PreviewProvider'))
 
 export default function App({
 	Component,
@@ -38,11 +39,7 @@ export default function App({
 			) : (
 				<Component {...pageProps} />
 			)}
-			{draftMode && (
-				<Suspense>
-					<VisualEditing />
-				</Suspense>
-			)}
+			{draftMode && <VisualEditing />}
 			<Analytics />
 		</div>
 	)
