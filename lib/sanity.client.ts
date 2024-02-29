@@ -1,4 +1,10 @@
-import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
+import {
+	apiVersion,
+	dataset,
+	projectId,
+	studioUrl,
+	useCdn,
+} from 'lib/sanity.api'
 import {
 	indexQuery,
 	type Post,
@@ -17,6 +23,10 @@ export function getClient(preview?: { token: string }): SanityClient {
 		apiVersion,
 		useCdn,
 		perspective: 'published',
+		stega: {
+			enabled: preview?.token ? true : false,
+			studioUrl,
+		},
 	})
 	if (preview) {
 		if (!preview.token) {
@@ -50,14 +60,14 @@ export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
 
 export async function getPostBySlug(
 	client: SanityClient,
-	slug: string
+	slug: string,
 ): Promise<Post> {
 	return (await client.fetch(postBySlugQuery, { slug })) || ({} as any)
 }
 
 export async function getPostAndMoreStories(
 	client: SanityClient,
-	slug: string
+	slug: string,
 ): Promise<{ post: Post; morePosts: Post[] }> {
 	return await client.fetch(postAndMoreStoriesQuery, { slug })
 }
