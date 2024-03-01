@@ -1,9 +1,9 @@
 import PostPage, { PostPageProps } from 'components/PostPage'
 import {
-  Settings,
-  postAndMoreStoriesQuery,
-  settingsQuery,
-  type Post,
+	type Post,
+	postAndMoreStoriesQuery,
+	Settings,
+	settingsQuery,
 } from 'lib/sanity.queries'
 import { useLiveQuery } from 'next-sanity/preview'
 

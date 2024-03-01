@@ -1,8 +1,8 @@
 import { ImageResponse } from '@vercel/og'
 import { apiVersion, dataset, projectId } from 'lib/sanity.api'
-import { createClient } from 'next-sanity'
 import type { NextRequest, NextResponse } from 'next/server'
 import type { PageConfig } from 'next/types'
+import { createClient } from 'next-sanity'
 
 export const config: PageConfig = { runtime: 'edge' }
 
@@ -12,7 +12,7 @@ import { Settings, settingsQuery } from 'lib/sanity.queries'
 
 export default async function og(req: NextRequest, res: NextResponse) {
 	const font = fetch(
-		new URL('public/Catamaran-Bold.ttf', import.meta.url)
+		new URL('public/Catamaran-Bold.ttf', import.meta.url),
 	).then((res) => res.arrayBuffer())
 	const { searchParams } = new URL(req.url)
 
