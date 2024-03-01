@@ -4,6 +4,7 @@
 
 import { debugSecrets } from '@sanity/preview-url-secret/sanity-plugin-debug-secrets'
 import { visionTool } from '@sanity/vision'
+import { StudioFavicon } from 'components/StudioFavicon'
 import {
 	apiVersion,
 	dataset,
@@ -31,6 +32,7 @@ export default defineConfig({
 	basePath: '/studio',
 	projectId,
 	dataset,
+	icon: StudioFavicon,
 	title,
 	schema: {
 		// If you want more content types, you can add them to this array

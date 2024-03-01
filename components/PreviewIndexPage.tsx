@@ -1,9 +1,9 @@
 import IndexPage, { type IndexPageProps } from 'components/IndexPage'
 import {
-  indexQuery,
-  settingsQuery,
-  type Post,
-  type Settings,
+	indexQuery,
+	type Post,
+	type Settings,
+	settingsQuery,
 } from 'lib/sanity.queries'
 import { useLiveQuery } from 'next-sanity/preview'
 
