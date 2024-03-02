@@ -42,6 +42,11 @@ export default function BlogHeader({
 	level,
 }: {
 	description?: any[]
+	/**
+	 * Level `1` is the homepage. Not a link.
+	 *
+	 * Level `2` is any other page. Links to the homepage.
+	 */
 	level: 1 | 2
 }) {
 	switch (level) {

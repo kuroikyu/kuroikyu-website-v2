@@ -47,7 +47,7 @@ export const SanityImage = (props: Props) => {
 				/>
 			</LinkComponent>
 			{caption && (
-				<figcaption className="pt-2 text-center text-sm tracking-tight text-zinc-100/60">
+				<figcaption className="pt-2 text-center text-sm text-zinc-100/60">
 					{caption}
 				</figcaption>
 			)}
