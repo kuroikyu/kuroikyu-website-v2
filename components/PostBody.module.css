@@ -1,31 +1,9 @@
-.portableText {
-	@apply text-lg leading-relaxed;
-}
-
-.portableText p,
-.portableText ul,
-.portableText ol,
-.portableText blockquote {
-	@apply my-6;
-}
-
-.portableText ul {
-	@apply list-inside list-disc;
-}
-
-.portableText h2 {
-	@apply mb-4 mt-12 text-3xl leading-snug;
-}
-
-.portableText h3 {
-	@apply mb-4 mt-8 text-2xl leading-snug;
-}
-
 .portableText a {
 	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
 	background-size: auto 175%;
 }
 
 .portableText a:hover {
+	background-size: auto 200%;
 	background-position-y: 100%;
 }
