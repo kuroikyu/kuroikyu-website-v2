@@ -34,7 +34,9 @@ const myCustomComponents = {
 
 export default function PostBody({ content }) {
 	return (
-		<div className={`mx-auto max-w-2xl ${styles.portableText}`}>
+		<div
+			className={`prose prose-invert lg:prose-xl prose-a:no-underline mx-auto ${styles.portableText}`}
+		>
 			<PortableText value={content} components={myCustomComponents} />
 		</div>
 	)
