@@ -1,8 +1,8 @@
+'use client'
 /**
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
 
-import { debugSecrets } from '@sanity/preview-url-secret/sanity-plugin-debug-secrets'
 import { visionTool } from '@sanity/vision'
 import { StudioFavicon } from 'components/StudioFavicon'
 import {
@@ -49,7 +49,7 @@ export default defineConfig({
 				locations: locate,
 			},
 			previewUrl: {
-				draftMode: {
+				previewMode: {
 					enable: DRAFT_MODE_ROUTE,
 				},
 			},
@@ -61,8 +61,6 @@ export default defineConfig({
 		// A convenient way to browse, manage and select all your Sanity assets.
 		// https://www.sanity.io/plugins/sanity-plugin-media
 		media(),
-		// The remaining plugins are only loaded in dev mode
-		process.env.NODE_ENV !== 'production' && debugSecrets(),
 		// Vision lets you query your content with GROQ in the studio
 		// https://www.sanity.io/docs/the-vision-plugin
 		process.env.NODE_ENV !== 'production' &&

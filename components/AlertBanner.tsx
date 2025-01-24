@@ -2,7 +2,7 @@
 import Container from 'components/BlogContainer'
 import { useSyncExternalStore } from 'react'
 
-const subscribe = () => () => {}
+const subscribe = () => () => { }
 
 export default function Alert({
 	preview,
@@ -21,15 +21,14 @@ export default function Alert({
 
 	return (
 		<div
-			className={`${
-				loading ? 'animate-pulse' : ''
-			} border-b border-accent-7 bg-accent-7 text-white`}
+			className={`${loading ? 'animate-pulse' : ''
+				} border-b border-accent-7 bg-accent-7 text-white`}
 		>
 			<Container>
 				<div className="py-2 text-center text-sm">
 					{'Previewing drafts. '}
 					<a
-						href="/api/disable-draft"
+						href="/api/draft-mode/disable"
 						className="underline transition-colors duration-200 hover:text-cyan"
 					>
 						Back to published

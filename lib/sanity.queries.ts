@@ -1,4 +1,4 @@
-import { groq } from 'next-sanity'
+import groq from 'groq'
 
 const postFields = groq`
   _id,
@@ -45,10 +45,10 @@ export const postBySlugQuery = groq`
 export interface Author {
 	name?: string
 	picture?:
-		| {
-				alt?: string
-		  }
-		| any
+	| {
+		alt?: string
+	}
+	| any
 }
 
 export interface Post {
@@ -70,3 +70,4 @@ export interface Settings {
 		title?: string
 	}
 }
+

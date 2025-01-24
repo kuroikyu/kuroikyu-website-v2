@@ -1,4 +1,4 @@
-import { PortableText } from '@portabletext/react'
+import { PortableText } from 'next-sanity'
 import { Erica_One } from 'next/font/google'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -77,8 +77,7 @@ export default function BlogHeader({
 
 		default:
 			throw new Error(
-				`Invalid level: ${
-					JSON.stringify(level) || typeof level
+				`Invalid level: ${JSON.stringify(level) || typeof level
 				}, only 1 or 2 are allowed`,
 			)
 	}

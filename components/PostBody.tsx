@@ -7,7 +7,7 @@
  * https://portabletext.org/
  *
  */
-import { PortableText } from '@portabletext/react'
+import { PortableText, type PortableTextReactComponents } from 'next-sanity'
 import getYouTubeID from 'get-youtube-id'
 
 import styles from './PostBody.module.css'
@@ -15,7 +15,7 @@ import { SanityImage } from './SanityImage'
 import Spotify from './Spotify'
 import YouTube from './YouTube'
 
-const myCustomComponents = {
+const myCustomComponents: Partial<PortableTextReactComponents> = {
 	types: {
 		image: ({ value }) => {
 			return <SanityImage {...value} />

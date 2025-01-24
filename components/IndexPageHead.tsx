@@ -1,4 +1,4 @@
-import { toPlainText } from '@portabletext/react'
+import { toPlainText } from 'next-sanity'
 import * as demo from 'lib/demo.data'
 import { Settings } from 'lib/sanity.queries'
 import {
