@@ -45,7 +45,9 @@ export default defineConfig({
 			defaultDocumentNode: previewDocumentNode(),
 		}),
 		presentationTool({
-			locate,
+			resolve: {
+				locations: locate,
+			},
 			previewUrl: {
 				draftMode: {
 					enable: DRAFT_MODE_ROUTE,
@@ -64,6 +66,6 @@ export default defineConfig({
 		// Vision lets you query your content with GROQ in the studio
 		// https://www.sanity.io/docs/the-vision-plugin
 		process.env.NODE_ENV !== 'production' &&
-			visionTool({ defaultApiVersion: apiVersion }),
+		visionTool({ defaultApiVersion: apiVersion }),
 	],
 })
