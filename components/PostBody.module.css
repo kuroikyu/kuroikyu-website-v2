@@ -1,9 +1,0 @@
-.portableText a {
-	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
-	background-size: auto 175%;
-}
-
-.portableText a:hover {
-	background-size: auto 200%;
-	background-position-y: 100%;
-}
