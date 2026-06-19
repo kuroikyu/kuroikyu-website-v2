@@ -3,7 +3,6 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
-		"postbuild": "next-sitemap --config next-sitemap.config.js",
 		"dev": "next dev --turbopack",
 		"format": "npx prettier --write . --ignore-path .gitignore --cache",
 		"lint": "next lint -- --ignore-path .gitignore",
