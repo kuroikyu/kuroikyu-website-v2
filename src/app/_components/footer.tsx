@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="grid gap-8 md:grid-cols-3">
         <div className="mx-auto w-8 md:mx-0">
           <Link href="/" aria-label="Return to the homepage">
-            <KuroiKyuIcon className="hover:shadow-medium w-full transition-all duration-200 hover:shadow-kuroi/50" />
+            <KuroiKyuIcon className="w-full transition-all duration-200 hover:shadow-md hover:shadow-kuroi/50" />
           </Link>
         </div>
         <p className="text-center">
