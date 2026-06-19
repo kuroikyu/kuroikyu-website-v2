@@ -21,7 +21,7 @@ To be fair, I think all positions are understandable and have great points behin
 People are going to use it no matter what and we have seen that already. Countries cannot block it. Services cannot ban it. Schools cannot forbid students from using it. However, attempts to restrict AI usage have often proven ineffective. I can only think of the famous quote from Jurassic Park "Life finds a way", us humans will find a way around all restrictions to use AI.
 
 ![Screenshot of the movie Jurassic Park at the moment of the quote](/assets/blog/posts/a-2024-perspective-on-ai/jurassic-park.png)
->"Life finds a way" - Jurassic Park (1993)
+*"Life finds a way" - Jurassic Park (1993)*
 
 ## The hero we need
 
@@ -35,7 +35,7 @@ When generating an email response with AI we should give it enough context, revi
 Spending that extra time is a small thing but it makes a big difference. We still save a ton of time but we also ensure it sound like a human wrote. By doing that we are telling the customer that we respect their time.
 
 ![Uncle Ben delivering the famous quote to Peter](/assets/blog/posts/a-2024-perspective-on-ai/spider-man.png)
->"With great power comes great resposibility" - Spider-man (2002)
+*"With great power comes great resposibility" - Spider-man (2002)*
 
 ## Be human
 

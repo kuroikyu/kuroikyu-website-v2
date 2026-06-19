@@ -9,10 +9,28 @@
   @apply my-6;
 }
 
+.markdown ul {
+	@apply list-inside list-disc;
+}
+
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
 
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown a {
+	@apply bg-gradient-to-b from-transparent from-50% to-kuroi to-50% transition-all;
+	background-size: auto 175%;
+}
+
+.markdown a:hover {
+	background-position-y: 100%;
+}
+
+/* replacement for <figcaption /> */
+.markdown img+em {
+  @apply w-full inline-block pt-2 text-center text-sm text-zinc-100/60;
 }

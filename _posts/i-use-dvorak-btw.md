@@ -12,7 +12,7 @@ ogImage:
 
 ## But... why?
 
-A coworker introduced me to this layout. Thanks for coming to my TED Talk.
+A coworker introduced me to this layout. Thanks for coming to my TED Talk.  
 Okay, okay, allow me to elaborate.
 
 ## A Whole New World
@@ -24,7 +24,7 @@ My coworker, let's call him Mr. O, explained that among other factors, he wanted
 I thought that was genius. I had read everywhere that switching layouts was always complicated if you wanted to keep your old layout around. I completely identified with that feeling of never learning to touch type properly. My Qwerty mental model was already full of bad practices from years of making it up as I went, so I thought it would simply not be viable.
 
 ![Morbious saying his infamous quote "It's Morbin time."](/assets/blog/posts/i-use-dvorak-btw/morbin-time.jpg)
->Morbius (2022)
+*Morbius (2022)*
 
 During the first weeks, I used these two sites ([learn.dvorak.nl](https://learn.dvorak.nl/) and [keybr.com](https://www.keybr.com/)) to learn the new layout. I still used my regular keyboard at this point, and while I made decent progress, I thought forming a mental model of the layout would be easier if the keys were laid out like a grid. I knew of ortholinear keyboards (aka planks), but I never gave them enough credit until I found myself in this situation.
 
@@ -43,9 +43,8 @@ The next few months were a low point for Dvorak. I stopped bringing my plank to 
 It wasn't all lost, though. There was a small bead of hope in my heart for Dvorak. I was just hitting the snooze button harder than on a Monday morning after two weeks off.
 
 ## The Return of King
-
 ![Aragorn leading the charge with the dead army behind him](/assets/blog/posts/i-use-dvorak-btw/aragorn-charge.jpg)
->The Lord of the Rings: The Return of the King (2003)
+*The Lord of the Rings: The Return of the King (2003)*
 
 Like Aragorn charging into battle followed by an army of green ghosts, something rekindled my passion, and I decided to finally give Dvorak another chance. The plank replaced my 60% keyboard at work once again, and I was determined to make the switch.
 
@@ -60,7 +59,7 @@ This is where I am today. From here, it all looks fantastic. I can use my plank 
 I'll make a note to write again about my experience in a few months to report on my progress.
 
 ![That's all Folks end image from Looney Toons](/assets/blog/posts/i-use-dvorak-btw/looney-toons.jpg)
->Looney Toons
+*Looney Toons*
 
 That's it for now. Thanks for reading (and enduring my puns), and I hope this inspires you to think about that project sitting in the corner of your mind and give it another go. Do it, it's worth it! Even if it ends up failing, you should try it.
 
