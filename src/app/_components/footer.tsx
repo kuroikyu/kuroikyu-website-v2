@@ -1,32 +1,30 @@
-import Container from "@/app/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
+import Link from 'next/link'
+import KuroiKyuIcon from './kuroikyu-icon'
 
-export function Footer() {
+import styles from './footer.module.css'
+
+const Footer = () => {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+    <footer className={`container mx-auto px-5 pb-16 ${styles.footer}`}>
+      <hr className="mb-8 mt-28 border-accent-7" />
+      <div className="grid gap-8 md:grid-cols-3">
+        <div className="mx-auto w-8 md:mx-0">
+          <Link href="/" aria-label="Return to the homepage">
+            <KuroiKyuIcon className="hover:shadow-medium w-full transition-all duration-200 hover:shadow-kuroi/50" />
+          </Link>
         </div>
-      </Container>
+        <p className="text-center">
+          Get in touch:{' '}
+          <Link href={`mailto:hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}>
+            {`hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}
+          </Link>
+        </p>
+        <div className="text-center text-zinc-100/60 md:text-right">
+          <Link href="/cookies">Cookies</Link>
+        </div>
+      </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
