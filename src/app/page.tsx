@@ -15,7 +15,7 @@ export default function Index() {
       <Container>
         <BlogHeader
           level={1}
-          description="Embark on a nerdy adventure with me as we explore the tech, games, and all things geeky."
+          description='Embark on a nerdy adventure with me as we explore the tech, games, and all things geeky.'
         />
         <HeroPost
           title={heroPost.title}

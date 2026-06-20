@@ -15,22 +15,22 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="mx-auto mb-12 hidden items-center justify-between md:flex">
+      <div className='mx-auto mb-12 hidden items-center justify-between md:flex'>
         <Avatar name={author.name} picture={author.picture} />
-        <div className="text-lg">
+        <div className='text-lg'>
           <DateFormatter dateString={date} />
         </div>
       </div>
 
-      <div className="mb-8 sm:mx-0 md:mb-16">
+      <div className='mb-8 sm:mx-0 md:mb-16'>
         <CoverImage title={title} src={coverImage} />
       </div>
 
-      <div className="mx-auto max-w-2xl md:hidden">
-        <div className="mb-6">
+      <div className='mx-auto max-w-2xl md:hidden'>
+        <div className='mb-6'>
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className="text-lg">
+        <div className='text-lg'>
           <DateFormatter dateString={date} />
         </div>
       </div>
