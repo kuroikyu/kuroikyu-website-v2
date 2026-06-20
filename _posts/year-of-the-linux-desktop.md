@@ -20,9 +20,14 @@ I was just a regular Windows user. I had all my stuff there: Steam with all the 
 
 One day, Microsoft thought I had nothing better to do so it decided that as part of a regular system update it should also break my WSL installation. All the content was gone, it still worked but it was a fresh install of WSL for some reason. I looked for a fix for hours. I tried as many ways to recover my data as I could but to no avail. All my projects were backed up to GitHub but my Neovim config was not. I know this was my mistake but still I was sad to see it gone.
 
+Messing with my Neovim config was the last straw. [Microslop](https://www.pcworld.com/article/3075135/microsoft-says-stop-calling-it-microslop-or-youre-banned.html) and I were no longer friends and I had to do something about it.
+
+![Friendship ended meme](/assets/blog/posts/year-of-the-linux-desktop/friendship-ended-meme.jpg)
+*Internet meme*
+
 ## Leap of Faith
 
-One thing was clear, messing with my Neovim config was the last straw. Microslop and I were no longer friends and I had to do something about it. In a rare (for me) compulsive purchase I bought a new NVMe drive online and started looking for a distribution that would fit my needs. I knew that I was going to dual-boot but I wanted a distro that could game in hopes that it would reduce the amount of times I had to boot into Windows. I focused on gaming because I knew that, for the most part, all distros would cover the rest of my needs regardless of which one I picked. That meant that a lot of popular options moved down the list and one distro particularly stood out: [Pop!\_OS](https://system76.com/pop). I had heard many good things about *System76* and knowing that their distribution supported Nvidia graphics meant it was perfect for my use case.
+ In a rare (for me) compulsive purchase I bought a new NVMe drive online and started looking for a distribution that would fit my needs. I knew that I was going to dual-boot but I wanted a distro that could game in hopes that it would reduce the amount of times I had to boot into Windows. I focused on gaming because I knew that, for the most part, all distros would cover the rest of my needs regardless of which one I picked. That meant that a lot of popular options moved down the list and one distro particularly stood out: [Pop!\_OS](https://system76.com/pop). I had heard many good things about *System76* and knowing that their distribution supported Nvidia graphics meant it was perfect for my use case.
 
 As soon as the drive arrived, I installed Pop!\_OS and made a list of all the things it had to do to truly replace Windows. One by one I started installing what was necessary to cover them. [Jellyfin](https://jellyfin.org/) replaced Plex, I installed Neovim and setup a dotfiles repo, and games were running in Steam so easy I couldn't believe it. I did it, I made the switch, and the grass was greener!
 
@@ -33,6 +38,9 @@ Over the next days and weeks I looked for a solution to those small bits and pie
 My wish for the future would be to finally ditch Windows. I know, I'm asking too much. As long as gaming is involved, there's no guarantee you wont be forced to boot to Windows. It's mostly for anti-cheats or external launchers in my case, although this last one seems to be less of a problem nowadays.
 
 At some point I'll want to distro-hop. I want to try *Arch* just to see if it's really that different, but for now I just need a system I can rely on for my *personal computing*. Oh, and exploring the world of tilling window managers is also on the horizon.
+
+![Hackerman](/assets/blog/posts/year-of-the-linux-desktop/hackerman.jpg)
+*Hackerman - Kung Fury (2015)*
 
 ## A Parting Gift
 
