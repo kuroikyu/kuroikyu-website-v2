@@ -19,9 +19,7 @@ const Footer = () => {
             {`hello@${process.env.NEXT_PUBLIC_SITE_DOMAIN}`}
           </Link>
         </p>
-        <div className='text-center text-zinc-100/60 md:text-right'>
-          <Link href='/cookies'>Cookies</Link>
-        </div>
+        <div className='text-center text-zinc-100/60 md:text-right'>Being silly since 1989</div>
       </div>
     </footer>
   )
