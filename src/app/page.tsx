@@ -3,6 +3,7 @@ import { HeroPost } from '@/app/_components/hero-post'
 import { MoreStories } from '@/app/_components/more-stories'
 import { getAllPosts } from '@/lib/api'
 import BlogHeader from './_components/BlogHeader'
+import AboutMe from './_components/AboutMe'
 
 export default function Index() {
   const allPosts = getAllPosts()
@@ -17,6 +18,7 @@ export default function Index() {
           level={1}
           description='Embark on a nerdy adventure with me as we explore the tech, games, and all things geeky.'
         />
+        <AboutMe />
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
