@@ -1,6 +1,4 @@
-import { type Author } from '@/interfaces/author'
 import Link from 'next/link'
-import Avatar from './avatar'
 import CoverImage from './cover-image'
 import DateFormatter from './date-formatter'
 
@@ -9,11 +7,10 @@ type Props = {
   coverImage: string
   date: string
   excerpt: string
-  author: Author
   slug: string
 }
 
-export function PostPreview({ title, coverImage, date, excerpt, author, slug }: Props) {
+export function PostPreview({ title, coverImage, date, excerpt, slug }: Props) {
   return (
     <div>
       <div className='mb-5'>
@@ -28,7 +25,6 @@ export function PostPreview({ title, coverImage, date, excerpt, author, slug }: 
         <DateFormatter dateString={date} />
       </div>
       <p className='mb-4 text-lg leading-relaxed'>{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   )
 }
