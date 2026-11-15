@@ -10,6 +10,7 @@ const config = {
   tabWidth: 2,
   printWidth: 100,
   endOfLine: 'lf',
+  tailwindStylesheet: './src/app/globals.css',
   plugins: [
     // WARN: tailwind plugin should always be the last to load
     'prettier-plugin-tailwindcss',

@@ -1,37 +1,43 @@
 {
-	"name": "kuroikyu-com",
-	"private": true,
-	"scripts": {
-		"build": "next build",
-		"dev": "next dev --turbopack",
-		"format": "npx prettier --write . --ignore-path .gitignore --cache",
-		"lint": "next lint -- --ignore-path .gitignore",
-		"lint:fix": "npm run format && npm run lint -- --fix",
-		"start": "next start",
-		"type-check": "tsc --noEmit"
-	},
-	"dependencies": {
+  "name": "kuroikyu-com",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write . --ignore-path .gitignore --cache",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "pnpm format && pnpm lint --fix",
+    "start": "next start",
+    "type-check": "next typegen && tsc --noEmit",
+    "format:check": "prettier --check . --ignore-path .gitignore"
+  },
+  "dependencies": {
     "classnames": "^2.5.1",
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.4.0",
     "gray-matter": "^4.0.3",
-    "next": "latest",
-    "react": "^19",
-    "react-dom": "^19",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
-	},
-	"devDependencies": {
-    "@types/node": "^20.14.8",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.2"
-	},
-	"engines": {
-		"node": ">=24"
-	},
-  "packageManager": "pnpm@11.8.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "postcss": "^8.5.33",
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@12.21.0",
+  "type": "module"
 }

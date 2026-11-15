@@ -1,3 +1,6 @@
 allowBuilds:
   sharp: true
 enablePrePostScripts: true
+overrides:
+  # TypeScript ESLint still requests minimatch 10, which has a glob amplification advisory.
+  '@typescript-eslint/typescript-estree>minimatch': ^11.0.8
