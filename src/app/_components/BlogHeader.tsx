@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import KuroikyuTitle from './KuroikyuTitle'
 
 export default function BlogHeader({
@@ -16,7 +17,7 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className='mb-10 mt-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between'>
+        <header className='mt-16 mb-10 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between'>
           <h1 className='lg:pr-8'>
             <KuroikyuTitle classNames='max-w-xs sm:max-w-md md:max-w-xl' />
           </h1>
@@ -29,7 +30,7 @@ export default function BlogHeader({
     case 2:
       return (
         <header>
-          <h2 className='mb-20 mt-8 w-36 transition-all duration-200 hover:shadow-md hover:shadow-kuroi/50 md:w-52'>
+          <h2 className='mt-8 mb-20 w-36 transition-all duration-200 hover:shadow-md hover:shadow-kuroi/50 md:w-52'>
             <Link href='/' aria-label='Return to the homepage'>
               <KuroikyuTitle classNames='w-36 md:w-52' />
             </Link>

@@ -2,8 +2,9 @@ import Container from '@/app/_components/container'
 import { HeroPost } from '@/app/_components/hero-post'
 import { MorePosts } from '@/app/_components/more-posts'
 import { getAllPosts } from '@/lib/api'
-import BlogHeader from './_components/BlogHeader'
+
 import AboutMe from './_components/AboutMe'
+import BlogHeader from './_components/BlogHeader'
 
 export default function Index() {
   const allPosts = getAllPosts()

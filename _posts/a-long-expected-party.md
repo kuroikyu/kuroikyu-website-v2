@@ -1,13 +1,13 @@
 ---
-title: "A Long-expected Party"
-excerpt: "First of many entries in this new adventure. Geekness awaits!"
-coverImage: "/assets/blog/posts/a-long-expected-party/cover.jpg"
-date: "2023-05-07T09:35:07.322Z"
+title: 'A Long-expected Party'
+excerpt: 'First of many entries in this new adventure. Geekness awaits!'
+coverImage: '/assets/blog/posts/a-long-expected-party/cover.jpg'
+date: '2023-05-07T09:35:07.322Z'
 author:
   name: Kuroi Kyu
-  picture: "/assets/blog/authors/kk.png"
+  picture: '/assets/blog/authors/kk.png'
 ogImage:
-  url: "/assets/blog/posts/a-long-expected-party/cover.jpg"
+  url: '/assets/blog/posts/a-long-expected-party/cover.jpg'
 ---
 
 ## How did you build this website?

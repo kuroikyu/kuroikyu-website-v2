@@ -1,10 +1,11 @@
-import Footer from '@/app/_components/footer'
-import { BLOG_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants'
+import './globals.css'
+
+import cn from 'classnames'
 import type { Metadata } from 'next'
 import { Catamaran } from 'next/font/google'
-import cn from 'classnames'
 
-import './globals.css'
+import Footer from '@/app/_components/footer'
+import { BLOG_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants'
 
 const catamaran = Catamaran({
   weight: '400',

@@ -1,5 +1,7 @@
-import CoverImage from '@/app/_components/cover-image'
 import Link from 'next/link'
+
+import CoverImage from '@/app/_components/cover-image'
+
 import DateFormatter from './date-formatter'
 
 type Props = {
