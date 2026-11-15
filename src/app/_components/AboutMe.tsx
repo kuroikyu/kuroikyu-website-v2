@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import Avatar from './avatar'
 import Dice from './icons/Dice'
 import Git from './icons/Git'
@@ -10,7 +11,7 @@ const AboutMe = () => (
       <Avatar name='Kuroi Kyu' picture='/assets/blog/authors/kk.png' />
       <div>
         <Link
-          className='bg-gradient-to-b from-transparent from-50% to-kuroi to-50% bg-[length:auto_175%] transition-all hover:[background-position-y:100%]'
+          className='bg-linear-to-b from-transparent from-50% to-kuroi to-50% bg-[length:auto_175%] transition-all hover:[background-position-y:100%]'
           href='mailto:hello@kuroikyu.com'
         >
           hello@kuroikyu.com

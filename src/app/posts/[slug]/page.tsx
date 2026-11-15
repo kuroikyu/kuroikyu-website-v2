@@ -1,12 +1,13 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllPosts, getPostBySlug } from '@/lib/api'
-import { BLOG_NAME } from '@/lib/constants'
-import markdownToHtml from '@/lib/markdownToHtml'
+
+import BlogHeader from '@/app/_components/BlogHeader'
 import Container from '@/app/_components/container'
 import { PostBody } from '@/app/_components/post-body'
 import { PostHeader } from '@/app/_components/post-header'
-import BlogHeader from '@/app/_components/BlogHeader'
+import { getAllPosts, getPostBySlug } from '@/lib/api'
+import { BLOG_NAME } from '@/lib/constants'
+import markdownToHtml from '@/lib/markdownToHtml'
 
 export default async function Post(props: Params) {
   const params = await props.params

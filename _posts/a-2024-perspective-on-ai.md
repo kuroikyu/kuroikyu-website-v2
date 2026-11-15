@@ -1,13 +1,13 @@
 ---
-title: "A 2024 Perspective on AI"
-excerpt: "We delve into the evolving realm of artificial intelligence and the power that lies within us to make things better."
-coverImage: "/assets/blog/posts/a-2024-perspective-on-ai/cover.jpg"
-date: "2024-03-02T12:03:03.140Z"
+title: 'A 2024 Perspective on AI'
+excerpt: 'We delve into the evolving realm of artificial intelligence and the power that lies within us to make things better.'
+coverImage: '/assets/blog/posts/a-2024-perspective-on-ai/cover.jpg'
+date: '2024-03-02T12:03:03.140Z'
 author:
   name: Kuroi Kyu
-  picture: "/assets/blog/authors/kk.png"
+  picture: '/assets/blog/authors/kk.png'
 ogImage:
-  url: "/assets/blog/posts/a-2024-perspective-on-ai/cover.jpg"
+  url: '/assets/blog/posts/a-2024-perspective-on-ai/cover.jpg'
 ---
 
 Over the last few months I have had many interesting conversations around AI with people from completely different industries. Some of them are totally into it, others are understandably worried, while a few are against the use of AI in any context.
@@ -21,7 +21,7 @@ To be fair, I think all positions are understandable and have great points behin
 People are going to use it no matter what and we have seen that already. Countries cannot block it. Services cannot ban it. Schools cannot forbid students from using it. However, attempts to restrict AI usage have often proven ineffective. I can only think of the famous quote from Jurassic Park "Life finds a way", us humans will find a way around all restrictions to use AI.
 
 ![Screenshot of the movie Jurassic Park at the moment of the quote](/assets/blog/posts/a-2024-perspective-on-ai/jurassic-park.png)
-*"Life finds a way" - Jurassic Park (1993)*
+_"Life finds a way" - Jurassic Park (1993)_
 
 ## The hero we need
 
@@ -35,7 +35,7 @@ When generating an email response with AI we should give it enough context, revi
 Spending that extra time is a small thing but it makes a big difference. We still save a ton of time but we also ensure it sound like a human wrote. By doing that we are telling the customer that we respect their time.
 
 ![Uncle Ben delivering the famous quote to Peter](/assets/blog/posts/a-2024-perspective-on-ai/spider-man.png)
-*"With great power comes great resposibility" - Spider-man (2002)*
+_"With great power comes great resposibility" - Spider-man (2002)_
 
 ## Be human
 

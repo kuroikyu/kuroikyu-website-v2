@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import KuroiKyuIcon from './kuroikyu-icon'
 
 import styles from './footer.module.css'
+import KuroiKyuIcon from './kuroikyu-icon'
 
 const Footer = () => {
   return (
     <footer className={`container mx-auto px-5 pb-16 ${styles.footer}`}>
-      <hr className='mb-8 mt-28 border-accent-7' />
+      <hr className='mt-28 mb-8 border-accent-7' />
       <div className='grid gap-8 md:grid-cols-3'>
         <div className='mx-auto w-8 md:mx-0'>
           <Link href='/' aria-label='Return to the homepage'>

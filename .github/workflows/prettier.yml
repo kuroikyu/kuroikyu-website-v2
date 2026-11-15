@@ -23,19 +23,20 @@ jobs:
       contents: write # for gr2m/create-or-update-pull-request-action to push local changes
       pull-requests: write # for gr2m/create-or-update-pull-request-action to create a PR
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
-          cache: npm
-          node-version: lts/*
-      - run: npm ci --ignore-scripts --only-dev
-      - uses: actions/cache@v4
+          cache: pnpm
+          node-version: 26
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - uses: actions/cache@v6
         with:
-          path: node_modules/.cache/prettier/.prettier-cache
-          key: prettier-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.gitignore') }}
-      - run: npm run format
+          path: node_modules/.cache/prettier
+          key: prettier-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('.gitignore') }}
+      - run: pnpm format
       - run: git restore .github/workflows
       - uses: gr2m/create-or-update-pull-request-action@v1.x
         env:
@@ -44,6 +45,6 @@ jobs:
           author: github-actions <41898282+github-actions[bot]@users.noreply.github.com>
           branch: actions/prettier-if-needed
           title: 'chore(prettier): fix unformatted files'
-          body: A robot ran `npm run format` and made this PR.
+          body: A robot ran `pnpm format` and made this PR.
           commit-message: 'chore(prettier): 🤖 ✨'
           labels: automation
