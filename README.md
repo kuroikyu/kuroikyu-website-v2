@@ -13,7 +13,7 @@ Just a place to hold my thoughts and share them with the world wide web.
 
 ## Requirements
 
-- Node.js 24 or newer
+- Node.js 26 or newer
 - pnpm 12.21.0 (`npm install --global pnpm@12.21.0`)
 
 ## How to run
