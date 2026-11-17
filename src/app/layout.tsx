@@ -1,7 +1,7 @@
 import './globals.css'
 
 import cn from 'classnames'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Catamaran } from 'next/font/google'
 
 import Footer from '@/app/_components/footer'
@@ -11,6 +11,13 @@ const catamaran = Catamaran({
   weight: '400',
   subsets: ['latin-ext'],
 })
+
+const backgroundColor = '#111112'
+
+export const viewport: Viewport = {
+  themeColor: backgroundColor,
+  colorScheme: 'dark',
+}
 
 export const metadata: Metadata = {
   title: `Home | ${BLOG_NAME}`,
@@ -29,11 +36,10 @@ export default function RootLayout({
   const dotSize = 1
   const dotSpace = 20
   const dotBetween = dotSpace - dotSize
-  const bgColor = '#111112'
   const dotColor = '#3f3f46'
 
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en' className='bg-black' suppressHydrationWarning>
       <head>
         <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
@@ -43,7 +49,6 @@ export default function RootLayout({
         <link rel='shortcut icon' href='/favicon/favicon.ico' />
         <meta name='msapplication-TileColor' content='#000000' />
         <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
-        <meta name='theme-color' content='#000' />
         <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
       </head>
       <body
@@ -53,8 +58,8 @@ export default function RootLayout({
         )}
         style={{
           background: `
-            linear-gradient(90deg, ${bgColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
-            linear-gradient(${bgColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
+            linear-gradient(90deg, ${backgroundColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
+            linear-gradient(${backgroundColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
             ${dotColor}
             `,
         }}
