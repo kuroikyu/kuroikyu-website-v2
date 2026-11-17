@@ -57,10 +57,12 @@ export default function RootLayout({
           'bg-black text-zinc-100 selection:bg-kuroi selection:text-kuroi-50',
         )}
         style={{
+          // Safari uses the underlying background color to tint its browser UI.
           background: `
             linear-gradient(90deg, ${backgroundColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
             linear-gradient(${backgroundColor} ${dotBetween}px, transparent 1%) center 220% / ${dotSpace}px ${dotSpace}px,
-            ${dotColor}
+            linear-gradient(${dotColor}, ${dotColor}),
+            ${backgroundColor}
             `,
         }}
       >
